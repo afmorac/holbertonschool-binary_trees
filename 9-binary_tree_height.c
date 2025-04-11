@@ -14,6 +14,8 @@ size_t izq, der;
 if (tree == NULL)
 return (0);
 
+if (tree->left == NULL && tree->right == NULL)
+return (0);
 izq = binary_tree_height(tree->left);
 der = binary_tree_height(tree->right);
 
