@@ -28,5 +28,5 @@ if (parent->right != NULL)
 parent->right->parent = newNode;
 
 parent->right = newNode;
-return(newNode);
+return (newNode);
 }
