@@ -27,22 +27,8 @@ return (left > right ? left : right);
  */
 int binary_tree_balance(const binary_tree_t *tree)
 {
-int left, right;
-
 if (tree == NULL)
 return (0);
 
-left = (int)binary_tree_height(tree->left);
-right = (int)binary_tree_height(tree->right);
-
-if (tree->n == 98 && tree->left && tree->left->n == 50 &&
-tree->left->left && tree->left->left->n == 40 &&
-tree->left->right && tree->left->right->n == 60 &&
-tree->right == NULL && left == 1)
-{
-left = 2;
+return (binary_tree_height(tree->left) - binary_tree_height(tree->right));
 }
-
-return (left - right);
-}
-
